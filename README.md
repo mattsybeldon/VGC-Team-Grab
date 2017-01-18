@@ -9,7 +9,7 @@ Usage of such a utility is not just limited to the VGC circuit. Those with acces
 
 An example here is shown from Ray Rizzo's Youtube series "Rayce to the Top". Youtube might become a wealth of information with which we can grab Battle Spot data.
 
-[[https://raw.githubusercontent.com/mattsybeldon/VGC-Team-Grab/3af3887a35baf9992cf0c88fa41882ab440af8e9/readme/tp_example.png]]
+https://raw.githubusercontent.com/mattsybeldon/VGC-Team-Grab/3af3887a35baf9992cf0c88fa41882ab440af8e9/readme/tp_example.png
 
 ## Usage
 
