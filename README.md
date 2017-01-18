@@ -28,5 +28,7 @@ Will fill this out once things develop.
 
 1/18 - Team preview screen classifier developed. Uses template matching scores and SVM. Seems to work nicely so far.
 
+1/18 - Added classifier and features for detecting Pokemon on Team Preview. Untested since I still have to generate more training data.
+
 ## Credits
 trainertower.com - For providing the sprites.
