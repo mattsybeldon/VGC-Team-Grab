@@ -25,6 +25,7 @@ Will fill this out once things develop.
 ## History
 
 1/17 - Initial commit. Made scripts to generate labelled sprites that will be our ground truths.
+
 1/18 - Team preview screen classifier developed. Uses template matching scores and SVM. Seems to work nicely so far.
 
 ## Credits
