@@ -17,13 +17,15 @@ You will need:
 
 1. Python 2
 2. OpenCV
-3. pip if ripping your own sprites for whatever reason
+3. SciKit-Learn
+4. pip if ripping your own sprites for whatever reason
 
 Will fill this out once things develop.
 
 ## History
 
 1/17 - Initial commit. Made scripts to generate labelled sprites that will be our ground truths.
+1/18 - Team preview screen classifier developed. Uses template matching scores and SVM. Seems to work nicely so far.
 
 ## Credits
 trainertower.com - For providing the sprites.
