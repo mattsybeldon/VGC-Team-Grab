@@ -49,7 +49,7 @@ def return_tp_classifier():
     classifier = svm.SVC()
 
     cv_scores = cross_val_score(classifier, all_scores, all_labels, cv = 5)
-    print('Estimated Accuracy: ' + str(np.mean(cv_scores)))
+    print('Estimated accuracy for Team Preview: ' + str(np.mean(cv_scores)))
 
     classifier.fit(all_scores, all_labels)
 
