@@ -2,6 +2,8 @@
 Pokemon Detector Training Script
 Written by: Matt Sybeldon (bearsfan092)
 
+Maybe defunct. Depends on how robust we want to make this.
+
 This script uses the sprites as well as numerous junk images to train a classifier to determine if the block contains
 a Pokemon or not. This is the second stage of the cascaded classifier. The first stage lets us know if we're on Team
 Preview in the first place. Once this stage detects something, we will pass it off onto the next stage that will
