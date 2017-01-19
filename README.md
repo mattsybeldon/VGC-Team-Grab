@@ -30,5 +30,7 @@ Will fill this out once things develop.
 
 1/18 - Added classifier and features for detecting Pokemon on Team Preview. Untested since I still have to generate more training data.
 
+1/18 - Got a configuration script running to pick the monitoring region. This combined with the auto resize should make usage easier.
+
 ## Credits
 trainertower.com - For providing the sprites.
