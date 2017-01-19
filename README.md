@@ -32,5 +32,7 @@ Will fill this out once things develop.
 
 1/18 - Got a configuration script running to pick the monitoring region. This combined with the auto resize should make usage easier.
 
+1/19 - Wrote the nearest neighbor classifier for finding what Pokemon we're looking at. At this stage all individual classifiers should have at least an initial draft. Next step is to glue them all together and see performance on real world data.
+
 ## Credits
 trainertower.com - For providing the sprites.
