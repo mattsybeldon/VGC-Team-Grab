@@ -10,15 +10,14 @@ searching the whole screen.
 import cv2
 import numpy as np
 
-def resize_3ds(img):
+def resize_3ds(img, target_width):
     height, width = img.shape
 
-    if height == 240 and width == 800: #If you were a good person who actually checked their source...
-        return(img)
+    print(img.shape)
 
     #We are going to assume that aspect ratio is approximately correct. If not, your image looks bad anyway and go away
 
-    scale_factor = 240/height
+    scale_factor = float(target_width)/width
 
     output_img = cv2.resize(img, (0,0), fx = scale_factor, fy = scale_factor)
 
