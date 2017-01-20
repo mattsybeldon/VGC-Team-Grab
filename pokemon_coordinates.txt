@@ -1,0 +1,16 @@
+x y (you'll need to change these to row column notation. be sure to offset by 1)
+(53, 31)
+(53, 83)
+(53, 135)
+
+(111,31)
+(111,83)
+(111, 135)
+
+(233, 31)
+(233, 83)
+(233, 135)
+
+(291, 31)
+(291, 83)
+(291, 135)
