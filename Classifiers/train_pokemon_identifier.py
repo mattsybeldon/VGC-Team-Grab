@@ -34,6 +34,3 @@ def pokemon_classifier():
     knn_classifier.fit(features, labels)
 
     return(knn_classifier)
-
-
-pokemon_classifier()
