@@ -21,10 +21,10 @@ from sklearn.cross_validation import cross_val_score
 
 def return_tp_classifier():
     #Return only the files
-    positiveFiles = [f for f in listdir('../Training/TeamPreview/Positive') if isfile(join('../Training/TeamPreview/Positive', f))]
-    negativeFiles = [f for f in listdir('../Training/TeamPreview/Negative') if isfile(join('../Training/TeamPreview/Negative', f))]
+    positiveFiles = [f for f in listdir('Training/TeamPreview/Positive') if isfile(join('Training/TeamPreview/Positive', f))]
+    negativeFiles = [f for f in listdir('Training/TeamPreview/Negative') if isfile(join('Training/TeamPreview/Negative', f))]
 
-    template_path = '..\Training\TeamPreview/template.png'
+    template_path = 'Training\TeamPreview/template.png'
 
     #Initialize scores
     positive_scores = np.empty([len(positiveFiles), 1], dtype = float)
@@ -36,11 +36,11 @@ def return_tp_classifier():
     template_img = cv2.imread(template_path, 0)
 
     for i in xrange(0, len(positiveFiles) - 1):
-        img = cv2.imread('../Training/TeamPreview/Positive' + '/' + positiveFiles[i], 0)
+        img = cv2.imread('Training/TeamPreview/Positive' + '/' + positiveFiles[i], 0)
         positive_scores[i] = TemplateMatch.returnMatchScore(img, template_img)
 
     for i in xrange(0, len(positiveFiles) - 1):
-        img = cv2.imread('../Training/TeamPreview/Negative' + '/' + negativeFiles[i], 0)
+        img = cv2.imread('Training/TeamPreview/Negative' + '/' + negativeFiles[i], 0)
         negative_scores[i] = TemplateMatch.returnMatchScore(img, template_img)
 
     all_scores = np.append(positive_scores, negative_scores)

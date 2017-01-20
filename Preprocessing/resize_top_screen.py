@@ -13,14 +13,12 @@ import numpy as np
 def resize_3ds(img, target_width, target_height):
     height, width = img.shape
 
-    print(img.shape)
-
     #We are going to assume that aspect ratio is approximately correct. If not, your image looks bad anyway and go away
 
     x_scale_factor = float(target_width)/width
     y_scale_factor = float(target_height)/height
 
-    if x_scale_factor < 1 or y_scale_factor < 1:
+    if x_scale_factor < 1:
         print('Warning: Target image is smaller than 3DS resolution.')
 
     output_img = cv2.resize(img, (0,0), fx = x_scale_factor, fy = y_scale_factor)

@@ -15,7 +15,7 @@ from Features import hog_feature
 from sklearn import neighbors
 
 def pokemon_classifier():
-    sprite_directory = '../sprites/'
+    sprite_directory = 'sprites/'
     sprite_files =  [f for f in listdir(sprite_directory) if isfile(join(sprite_directory, f))]
 
     labels = []
