@@ -34,5 +34,7 @@ Will fill this out once things develop.
 
 1/19 - Wrote the nearest neighbor classifier for finding what Pokemon we're looking at. At this stage all individual classifiers should have at least an initial draft. Next step is to glue them all together and see performance on real world data.
 
+1/20 - Building up the main function and testing the flow of it. Squashed a bug with path names that I stupidly did. Collected information that we'll need to extract Pokemon from specific spots.
+
 ## Credits
 trainertower.com - For providing the sprites.
