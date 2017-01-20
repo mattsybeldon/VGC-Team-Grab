@@ -50,7 +50,7 @@ print('Done.')
 
 #Get template for team preview detection
 print('Loading team preview template...')
-template_img = cv2.imread('Training/template.png', 0)
+template_img = cv2.imread('Training/TeamPreview/template.png', 0)
 template_img = resize_top_screen.resize_3ds(template_img, 400, 45)
 print('Done')
 
@@ -58,7 +58,8 @@ print('Done')
 while True:
 
     #Look at screen region of interest
-    img = grab_screen.return_screen_grab()
+    #img = grab_screen.return_screen_grab()
+    img = cv2.imread('Training/TeamPreview/Positive/1.png', 0)
 
     #Resize it to the native 3DS resolution for consistency
     img_resize = resize_top_screen.resize_3ds(img, 400, 240)
@@ -68,6 +69,10 @@ while True:
 
     if tp_flag == True:
         #Function to extract list of the twelve Pokemon images
+        cv2.imshow('Temp', img_resize)
+        cv2.waitKey(0)
+        cv2.destroyAllWindows()
+        cv2.imwrite('temp.png', img_resize)
 
         #Function to extract list of Pokemon names based on list of Pokemon images
 
@@ -75,4 +80,5 @@ while True:
 
         #Sleep for three minutes
     else:
+        print('yarrr')
         #Sleep for five seconds
