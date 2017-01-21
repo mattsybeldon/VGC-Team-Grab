@@ -8,6 +8,7 @@ neighbor because there's like a bajillion Pokemon at this point, so that means a
 
 import numpy as np
 import os
+import cv2
 from os import listdir
 from os.path import isfile, join
 from Features import hog_feature
@@ -25,7 +26,9 @@ def pokemon_classifier():
         current_label = os.path.basename(sprite_files[i])
         name, extension = os.path.splitext(current_label)
         labels.append(int(os.path.basename(name)))
-        features.append(hog_feature.return_hog_feature(sprite_directory + sprite_files[i]))
+
+        img = cv2.imread(sprite_directory + sprite_files[i], 0)
+        features.append(hog_feature.return_hog_feature(img))
 
     features = np.asarray(features).astype(float)
     labels = np.asarray(labels).astype(int)
