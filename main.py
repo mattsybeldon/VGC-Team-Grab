@@ -22,6 +22,7 @@ from tasks import screencheck
 from Classifiers import TrainTeamPreview
 from Classifiers import train_pokemon_identifier
 from Preprocessing import resize_top_screen
+from Features import hog_feature
 
 print('Waiting for screen selection region. Click upper left corner and drag to lower right.')
 
@@ -71,10 +72,15 @@ while True:
         #Function to extract list of the twelve Pokemon images
         pkmn_imgs = grab_screen.return_pkmn_imgs(img_resize)
 
+
         #Function to extract list of Pokemon names based on list of Pokemon images
         for i in xrange(0, 11):
-            pkmn_labels = pkmn_classifier.predict(pkmn_imgs[i])
-            print(pkmn_labels[i])
+            pkmn_hog = hog_feature.return_hog_feature(pkmn_imgs[i])
+            cv2.imshow('temp', pkmn_imgs[i])
+            cv2.waitKey()
+            #print(pkmn_hog)
+            pkmn_labels = pkmn_classifier.predict(pkmn_hog.reshape(1, -1))
+            print(pkmn_labels)
 
         break
 
