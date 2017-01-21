@@ -36,5 +36,7 @@ Will fill this out once things develop.
 
 1/20 - Building up the main function and testing the flow of it. Squashed a bug with path names that I stupidly did. Collected information that we'll need to extract Pokemon from specific spots.
 
+1/21 - Got everything in the main written up except for the logging. The process itself "works" but isn't robust yet. Will be collecting some training data to correct that.
+
 ## Credits
 trainertower.com - For providing the sprites.
