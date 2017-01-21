@@ -9,9 +9,11 @@ there is a Pokemon within a subregion of the screen or not.
 import numpy as np
 import cv2
 
-def return_hog_feature(img_file):
+def return_hog_feature(img):
 
-    img = cv2.imread(img_file, 0)
+    width, height = img.shape
+    if width == 36 or height == 36:
+        print(img_file)
     gradient_x = cv2.Sobel(img, cv2.CV_32F, 1, 0)
     gradient_y = cv2.Sobel(img, cv2.CV_32F, 0, 1)
 
