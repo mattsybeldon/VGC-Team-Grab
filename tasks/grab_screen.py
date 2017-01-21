@@ -17,20 +17,20 @@ def return_screen_grab(left, upper, right, lower):
     return img_gray
 
 def return_pkmn_imgs(screen_img):
-    imgs = [screen_img[31:82, 53:109]]
-    imgs.append(screen_img[83:134, 53:109])
-    imgs.append(screen_img[135:186, 53:109])
+    imgs = [screen_img[38:70, 68:100]]
+    imgs.append(screen_img[93:125, 68:100])
+    imgs.append(screen_img[143:175, 68:100])
 
-    imgs.append(screen_img[31:82, 111:167])
-    imgs.append(screen_img[83:134, 111:167])
-    imgs.append(screen_img[135:186, 111:167])
+    imgs.append(screen_img[38:70, 124:156])
+    imgs.append(screen_img[93:125, 124:156])
+    imgs.append(screen_img[143:175, 124:156])
 
-    imgs.append(screen_img[31:82, 233:289])
-    imgs.append(screen_img[83:134, 233:289])
-    imgs.append(screen_img[135:186, 233:289])
+    imgs.append(screen_img[38:70, 248:280])
+    imgs.append(screen_img[93:125, 248:280])
+    imgs.append(screen_img[143:175, 248:280])
 
-    imgs.append(screen_img[31:82, 291:347])
-    imgs.append(screen_img[83:134, 291:347])
-    imgs.append(screen_img[135:186, 291:347])
+    imgs.append(screen_img[38:70, 304:336])
+    imgs.append(screen_img[93:125, 304:336])
+    imgs.append(screen_img[143:175, 304:336])
 
     return imgs
