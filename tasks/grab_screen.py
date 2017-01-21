@@ -15,3 +15,22 @@ def return_screen_grab(left, upper, right, lower):
     img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
     return img_gray
+
+def return_pkmn_imgs(screen_img):
+    imgs = [screen_img[31:82, 53:109]]
+    imgs.append(screen_img[83:134, 53:109])
+    imgs.append(screen_img[135:186, 53:109])
+
+    imgs.append(screen_img[31:82, 111:167])
+    imgs.append(screen_img[83:134, 111:167])
+    imgs.append(screen_img[135:186, 111:167])
+
+    imgs.append(screen_img[31:82, 233:289])
+    imgs.append(screen_img[83:134, 233:289])
+    imgs.append(screen_img[135:186, 233:289])
+
+    imgs.append(screen_img[31:82, 291:347])
+    imgs.append(screen_img[83:134, 291:347])
+    imgs.append(screen_img[135:186, 291:347])
+
+    return imgs
