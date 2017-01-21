@@ -69,12 +69,14 @@ while True:
 
     if tp_flag == True:
         #Function to extract list of the twelve Pokemon images
-        cv2.imshow('Temp', img_resize)
-        cv2.waitKey(0)
-        cv2.destroyAllWindows()
-        cv2.imwrite('temp.png', img_resize)
+        pkmn_imgs = grab_screen.return_pkmn_imgs(img_resize)
 
         #Function to extract list of Pokemon names based on list of Pokemon images
+        for i in xrange(0, 11):
+            pkmn_labels = pkmn_classifier.predict(pkmn_imgs[i])
+            print(pkmn_labels[i])
+
+        break
 
         #Write out team file
 
