@@ -15,10 +15,11 @@ file. Upon successful detection, the script will enter a sleep mode to let the r
 '''
 
 import cv2
-import numpy as np
+import time
 from tasks import grab_screen
 from tasks import screenset
 from tasks import screencheck
+from tasks import record_teams
 from Classifiers import TrainTeamPreview
 from Classifiers import train_pokemon_identifier
 from Preprocessing import resize_top_screen
@@ -72,21 +73,21 @@ while True:
         #Function to extract list of the twelve Pokemon images
         pkmn_imgs = grab_screen.return_pkmn_imgs(img_resize)
 
-
+        pkmn_labels = []
         #Function to extract list of Pokemon names based on list of Pokemon images
-        for i in xrange(0, 11):
+        for i in xrange(0, 12):
             pkmn_hog = hog_feature.return_hog_feature(pkmn_imgs[i])
-            cv2.imshow('temp', pkmn_imgs[i])
-            cv2.waitKey()
-            #print(pkmn_hog)
-            pkmn_labels = pkmn_classifier.predict(pkmn_hog.reshape(1, -1))
-            print(pkmn_labels)
+            pkmn_labels.append(str(pkmn_classifier.predict(pkmn_hog.reshape(1, -1))))
 
-        break
-
+        print(pkmn_labels)
         #Write out team file
+        record_teams.write_team_file(pkmn_labels)
 
         #Sleep for three minutes
+        print('Teams recorded. Sleeping for three minutes...')
+        time.sleep(180)
+
     else:
         print('yarrr')
         #Sleep for five seconds
+        time.sleep(5)
