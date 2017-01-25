@@ -38,5 +38,7 @@ Will fill this out once things develop.
 
 1/21 - Got everything in the main written up except for the logging. The process itself "works" but isn't robust yet. Will be collecting some training data to correct that.
 
+1/25 - Everything is now in place. The last steps are now to get the nearest neighbor classifier for Pokemon ID'ing more robust and to interface with OBS/XSplit for stream automation.
+
 ## Credits
 trainertower.com - For providing the sprites.
